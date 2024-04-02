@@ -1,4 +1,3 @@
-import React from 'react';
 
 function SearchForm({ setCity, getLocation }) {
     function handleNewCity(event) {
@@ -15,7 +14,7 @@ function SearchForm({ setCity, getLocation }) {
             <input
             type='text'
             className='form-control'
-            placeholder='Explore A City'
+            placeholder='Explore!'
             onChange={handleNewCity}
         />
         </form>
