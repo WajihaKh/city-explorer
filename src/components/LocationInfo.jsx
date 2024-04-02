@@ -1,4 +1,3 @@
-import React from 'react';
 
 function LocationInfo({ location, accessToken }) {
     return (
@@ -13,7 +12,7 @@ function LocationInfo({ location, accessToken }) {
                 <p className='card-text'>Longitude: {location.lon}</p>
                 {location.lat && location.lon && (
                     <img
-                        src={''}
+                        src={`https://maps.locationiq.com/v3/staticmap?key=${accessToken}&center=${location.lat},${location.lon}&zoom=16&size=600x400&format=jpg`}
                         className='card-img-top my-2'
                         alt='Location Map'
                     />
