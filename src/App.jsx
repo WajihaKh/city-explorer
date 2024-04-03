@@ -12,7 +12,6 @@ function App() {
     const [location, setLocation] = useState({});
     const [error, setError] = useState('');
     const [weatherData, setWeatherData] = useState([]);
-
     const accessToken = import.meta.env.VITE_APP_ACCESS_TOKEN;
 
     async function getLocation() {
