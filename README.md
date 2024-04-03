@@ -43,3 +43,8 @@ Back-End Technology
 **Start time:** 6:15 pm
 **Finish time:** 9:25 pm
 **Actual time needed to complete:** 3 hours and 10 minutes
+
+Estimated of time needed to complete: 5 hours
+Start time: 6:30 pm
+Finish time:
+Actual time needed to complete:
