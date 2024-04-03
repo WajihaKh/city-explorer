@@ -33,12 +33,20 @@ function App() {
                 setLocation(locationData);
                 setError('');
 
-            if (locationData.lat && location.Data.lon) {
-                let weatherResponse = await fetch ( `http://localhost:300/weather?lat=${locationData.lat}&${locationData.lon}&searchQuery=${city}`);
-                let weatherData = await weatherResponse.json();
+            if (locationData.lat && locationData.lon) {
+                try {
+                let weatherResponse = await fetch ( `http://localhost:3000/weather?lat=${locationData.lat}&lon=${locationData.lon}&searchQuery=${city}`);
+                let forecastData = await weatherResponse.json();
+                console.log('forecastData', forecastData);
+                console.log('weatherData ', weatherData );
+                setWeatherData(forecastData);
+            }
+            catch (error){
+                console.error('Error something went wrong');
+                setWeatherData([])
             }
             }
-
+        }
         } catch {
           setError('Error getting location information');
           setWeatherData([]);
