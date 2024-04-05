@@ -39,12 +39,17 @@ Back-End Technology
 
 ![LocationIQ](https://locationiq.com/?_gl=1*1oz2mgs*_ga*MjI5NjcwMjQ1LjE3MTE5NzM1MzU.*_ga_TRV5GF9KFC*MTcxMjAyMDE1OS43LjEuMTcxMjAyMTA2OC4wLjAuMA..)
 
-**Estimated of time needed to complete:** 3 hours
+**Estimate of time needed to complete:** 3 hours
 **Start time:** 6:15 pm
 **Finish time:** 9:25 pm
 **Actual time needed to complete:** 3 hours and 10 minutes
 
-Estimated of time needed to complete: 5 hours
-Start time: 6:30 pm
-Finish time:
-Actual time needed to complete:
+Estimate of time needed to complete: 5 hours
+Start time: 6:30 pm -- Start Time: 6:00 pm 04/04/2024
+Finish time: 10:30 pm
+Actual time needed to complete: 4 hours
+
+Estimate of time time needed to complete: 2 hours
+start time: 6:20 pm
+Finish time: 7:45 pm
+

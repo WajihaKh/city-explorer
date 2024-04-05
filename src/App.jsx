@@ -4,7 +4,9 @@ import ErrorMessage from './components/ErrorMessage';
 import SearchForm from './components/SearchForm';
 import Weather from './components/Weather';
 import Movies from './components/Movies';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+
 
 function App() {
     const [city, setCity] = useState('');
@@ -68,8 +70,9 @@ function App() {
         if (location.lat && location.lon) {
             try {
             let movieResponse = await fetch (`${API}/movies?city=${city}`);
-            let movieData = await movieResponse.json();
-            setMovies(movieData);
+            let moviesData = await movieResponse.json();
+            console.log('Fetched movieData ', moviesData);
+            setMovies(moviesData);
         }
         catch(error){
             console.error('Error something went wrong');
@@ -85,7 +88,7 @@ function App() {
                     {error && <ErrorMessage message={error} />}
                     {location.display_name && <LocationInfo location={location} accessToken={accessToken}/>}
                     {weatherData.length > 0 && <Weather forecasts={weatherData} />}
-                    {movies.length > 0 && <Movies movieData={movies} /> }
+                    {movies.length > 0 && <Movies moviesData={movies} /> }
                 </div>
             </div>
         </div>
