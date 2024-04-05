@@ -5,14 +5,14 @@ import SearchForm from './components/SearchForm';
 import Weather from './components/Weather';
 import './App.css'
 
-
-
 function App() {
     const [city, setCity] = useState('');
     const [location, setLocation] = useState({});
     const [error, setError] = useState('');
     const [weatherData, setWeatherData] = useState([]);
+    // const [movie, setMovies] = useState([]);
     const accessToken = import.meta.env.VITE_APP_ACCESS_TOKEN;
+    const API = import.meta.env.VITE_API_URL;
 
     async function getLocation() {
         if (!city) {
@@ -34,7 +34,7 @@ function App() {
 
             if (locationData.lat && locationData.lon) {
                 try {
-                let weatherResponse = await fetch ( `http://localhost:3000/weather?lat=${locationData.lat}&lon=${locationData.lon}&searchQuery=${city}`);
+                let weatherResponse = await fetch ( `${API}/weather?lat=${locationData.lat}&lon=${locationData.lon}&searchQuery=${city}`);
                 let forecastData = await weatherResponse.json();
                 console.log('forecastData', forecastData);
                 console.log('weatherData ', weatherData );
